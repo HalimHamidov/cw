@@ -79,7 +79,7 @@ typedef struct		header_s
 
 typedef struct s_op
 {
-	char 	name[5];
+	char 	name[PROG_NAME_LENGTH];
 	int		nb_params;
 	char 	params_type[3];
 	int 	id;
