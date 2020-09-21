@@ -14,8 +14,8 @@ int 	main(int argc, char **argv)
 	ft_parsing(&e, argc);
 //	printf("\n*** BUILD_VM ***\n");
 	ft_build_vm(&e, argc);
-	ft_init_cursor(&e);
-	ft_move_cursors(&e);
+//	ft_init_cursor(&e);
+//	ft_move_cursors(&e);
 //	ft_print_cursor(&e);
 //	ft_check_args(e, 4, 84);// https://www.hexadecimaldictionary.com/hexadecimal/0x54/
 	return (0);

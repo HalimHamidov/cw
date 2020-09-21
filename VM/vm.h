@@ -19,27 +19,37 @@ typedef struct 	s_player
 	char 	comment[COMMENT_LENGTH + 1];
 	char 	inst[CHAMP_MAX_SIZE + 1];
 	int		len;
+	int 	live;
 	int 	cursor_amount;
 	int 	index_start;
 	char	string[CHAMP_MAX_SIZE + 1];
 	int 	inst_len;
-	int 	reg[REG_NUMBER];
 }				t_player;
 
 typedef struct s_cursor {
 	struct	s_cursor *next;
 	int 	carry;
+	int 	counter;
+	int 	running;
 	int		player;
 	int 	id;
 	int 	index;
 	int 	cycle;
-	int 	pause;
+	int 	cycle_end;
+	int 	comnd_len;
+	char	operation[30];
+	int 	reg[REG_NUMBER];
 }				t_cursor;
 
 typedef struct 	s_env
 {
 	t_player 	*player;
 	t_cursor	*head;
+	int 		cycle;
+	int 		lives;
+	int 		check;
+	int 		last_alive;
+	int 		cycles_to_die;
 	char 		**strings;
 	char 		arena[MEM_SIZE];
 	int 		player_amount;

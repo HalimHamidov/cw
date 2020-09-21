@@ -6,9 +6,10 @@
 
 void 		ft_live(t_env *e, t_cursor *cursor)
 {
-	printf("live\n");
 	(void)e;
-	(void)cursor;
+	cursor->cycle = 10;
+	cursor->running = 1;
+	cursor->comnd_len = 4;
 }
 
 void 		ft_ld(t_env *e, t_cursor *cursor)
@@ -69,21 +70,21 @@ void 		ft_zjmp(t_env *e, t_cursor *cursor)
 
 void 		ft_ldi(t_env *e, t_cursor *cursor)
 {
-	printf("ldi\n");
+	printf("live\n");
 	(void)e;
 	(void)cursor;
 }
 
 void 		ft_sti(t_env *e, t_cursor *cursor)
 {
-	printf("sti\n");
+	printf("live\n");
 	(void)e;
 	(void)cursor;
 }
 
 void 		ft_fork(t_env *e, t_cursor *cursor)
 {
-	printf("fork\n");
+	printf("live\n");
 	(void)e;
 	(void)cursor;
 }
